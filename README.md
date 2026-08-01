@@ -52,5 +52,3 @@ The frontend will be available at `http://localhost:3000`.
 ## Architecture Overview
 See `architecture.md` and `design.md` for detailed information on the system design, agentic routing logic, and database schema.
 
-## Demo Video
-*(Provide YouTube Link Here)*
