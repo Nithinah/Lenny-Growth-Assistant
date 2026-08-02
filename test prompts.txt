@@ -1,0 +1,22 @@
+If you are still seeing the old error message, please make sure you click **"New Chat"** to start a fresh conversation so it uses the updated backend configuration!
+
+Here are some great sample prompts you can try that are perfectly tailored for the 10,000+ chunks of Lenny's Podcast transcripts we just embedded:
+
+### 🚢 Ship30for30 Essays (Content Generation)
+*These will route to the Ship30 agent and write a formatted essay:*
+- `"Write a Ship30for30 essay about the exact steps to find Product Market Fit."`
+- `"Write an atomic essay on the difference between product strategy and product vision."`
+- `"Write a punchy essay on how to conduct user interviews effectively."`
+
+### 💡 General Q&A (Direct Answers)
+*These will route to the standard Q&A agent to give you direct insights from the podcast guests:*
+- `"What does Brian Chesky say about leading through a crisis?"`
+- `"What are the common traits of top 1% product managers according to Shreyas Doshi?"`
+- `"How should a B2B SaaS startup measure retention?"`
+
+### 🎨 Artifacts (UI & Document Generation)
+*These will route to the Artifact agent to generate code or markdown that renders side-by-side:*
+- `"Generate a markdown document outlining a 30-60-90 day plan for a newly hired Product Manager."`
+- `"Create an HTML/CSS snippet showing a dashboard layout for tracking user retention metrics."`
+
+Go ahead and copy any of these into a **New Chat** and hit Enter!

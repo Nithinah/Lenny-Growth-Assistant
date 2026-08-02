@@ -29,8 +29,9 @@ class Orchestrator:
         
         # Check for artifact patterns
         artifact_patterns = [
-            r'\bgenerate\s+(a\s+)?(html|css|code|markdown|document|snippet)\b',
-            r'\bcreate\s+(a\s+)?(html|css|code|markdown|document|snippet)\b',
+            r'\bgenerate\s+(an?\s+)?(html|css|code|markdown|document|snippet)\b',
+            r'\bcreate\s+(an?\s+)?(html|css|code|markdown|document|snippet)\b',
+            r'\bbuild\s+(an?\s+)?(html|css|code|app|dashboard|website|page|ui)\b',
             r'\b(html|css)\s+code\b',
             r'\bartifact\b',
         ]

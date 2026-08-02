@@ -12,6 +12,7 @@ export default function Home() {
   const [messages, setMessages] = useState<any[]>([]);
   const [activeArtifact, setActiveArtifact] = useState<any | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
+  const [model, setModel] = useState<"gemini" | "ollama">("gemini");
 
   useEffect(() => {
     loadSessions();
@@ -84,7 +85,7 @@ export default function Home() {
       const response = await fetch(`${API_BASE_URL}/sessions/${currentSessionId}/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: text }),
+        body: JSON.stringify({ message: text, model: model }),
       });
 
       if (!response.body) throw new Error("No response body");
@@ -153,7 +154,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex h-screen w-full overflow-hidden bg-gray-50 text-gray-900 font-sans">
+    <main className="flex h-screen w-full overflow-hidden bg-[#0A0A10] text-gray-100 font-sans">
       <Sidebar
         sessions={sessions}
         activeSession={activeSessionId}
@@ -161,12 +162,14 @@ export default function Home() {
         onNewSession={handleNewSession}
         onDeleteSession={handleDeleteSession}
       />
-      <div className="flex-1 flex w-full">
+      <div className="flex-1 flex w-full relative">
         <Chat
           messages={messages}
           isGenerating={isGenerating}
           onSendMessage={handleSendMessage}
           onViewArtifact={(artifact: any) => setActiveArtifact(artifact)}
+          model={model}
+          onModelChange={setModel}
         />
         {activeArtifact && (
           <ArtifactViewer
